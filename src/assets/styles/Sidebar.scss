@@ -3,7 +3,8 @@
   background-color: $sidebar-bg;
   color: $sidebar-color;
   height: 100%;
-  text-align: center;
+  // text-align: center;
+  overflow: scroll;
 
   &_item {
     margin: 1rem;

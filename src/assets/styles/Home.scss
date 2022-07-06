@@ -1,7 +1,16 @@
 .homePage {
   .home {
+    display: flex;
+
     &_sidebar {
       width: 10vw;
+      display: flex;
+      justify-content: center;
+    }
+
+    &_showcase {
+      width: 100%;
+      height: 100vh;
     }
   }
 }
