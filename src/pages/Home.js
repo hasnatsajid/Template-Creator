@@ -4,6 +4,7 @@ import { DragDropContext, Droppable } from 'react-beautiful-dnd';
 const Home = () => {
   const onDragEnd = (result) => {
     console.log(result);
+    result.destination.innerHTML = 'mew';
   };
 
   return (
