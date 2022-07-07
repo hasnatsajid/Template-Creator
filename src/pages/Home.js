@@ -1,6 +1,9 @@
 import SideBar from '../components/Sidebar';
 import { DragDropContext, Droppable } from 'react-beautiful-dnd';
 
+import ContextProvider from '../global.context';
+import Dnd from '../components/Dnd';
+
 const Home = () => {
   const onDragEnd = (result) => {
     console.log(result);
@@ -10,6 +13,9 @@ const Home = () => {
   return (
     <div className="homePage">
       <div className="home">
+        {/* <ContextProvider>
+          <Dnd />
+        </ContextProvider> */}
         <DragDropContext onDragEnd={onDragEnd}>
           <div className="home_sidebar">
             <SideBar />

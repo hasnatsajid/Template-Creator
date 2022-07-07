@@ -32,6 +32,7 @@ const SideBar = () => {
       name: 'Blocks',
       key: '23463',
       img: '/assets/images/blocks.png',
+      blocks: [{ basic: [{ name: '2 columns', icon: '' }] }, { basic: [{ name: '2 columns', icon: '' }] }],
     },
     {
       name: 'Pages',
