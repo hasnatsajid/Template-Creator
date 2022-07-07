@@ -2,6 +2,10 @@ import { Link } from 'react-router-dom';
 import { Draggable, Droppable, DragDropContext } from 'react-beautiful-dnd';
 import { useState } from 'react';
 
+// Importing react-icons
+import { BiColumns } from 'react-icons/bi';
+import { FaColumns } from 'react-icons/fa';
+
 const SideBar = () => {
   const onDragEnd = (result) => {
     if (!result.destination) return;
@@ -32,7 +36,15 @@ const SideBar = () => {
       name: 'Blocks',
       key: '23463',
       img: '/assets/images/blocks.png',
-      blocks: [{ basic: [{ name: '2 columns', icon: '' }] }, { basic: [{ name: '2 columns', icon: '' }] }],
+      blocks: [
+        {
+          basic: [
+            { name: '2 Columns', icon: 'faColumns' },
+            { name: '2 Columns', icon: 'fa fa-column' },
+          ],
+        },
+        { default: [{ name: 'Sign in', icon: '' }] },
+      ],
     },
     {
       name: 'Pages',
@@ -72,6 +84,9 @@ const SideBar = () => {
                       <Link to="/">
                         <div className="sidebar_item">
                           <img src={item.img} alt="" />
+                          <FaColumns />
+                          <BiColumns />
+
                           <h2>{item.name}</h2>
                         </div>
                       </Link>
